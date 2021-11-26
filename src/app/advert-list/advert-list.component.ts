@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Advert } from '../models/advert';
+import { AdvertServiceService } from '../services/advert-service.service';
+
 
 @Component({
   selector: 'advert-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private advertService: AdvertServiceService) { }
+
+  path = "http://localhost:3000/adverts";
+  adverts : Advert[] = [];
 
   ngOnInit(): void {
+      this.advertService.getAdverts().subscribe(data => {this.adverts = data;});    
   }
-
 }

@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Cem Dağcı",
+      "adress": "Tevfikbey Mah., Orkide Sok. No:9 Sefaköy K.Çekmece İstanbul",
+      "email": "cemdagci@gmail.com",
+      "password": "test123",
+      "phoneNumber": "+905365987456",
+      "job": "Yazılım Mühendisi",
+      "bio": "Köpekleri severim. Hayvanlarla iyi anlaşırım.",
+      "pictureUrl": "https://randomuser.me/api/portraits/men/52.jpg",
+      "userRoleId": 0
+    },
+    {
+      "id": 2,
+      "name": "Aslı Şenol",
+      "adress": "BATI MAH. SABRI TASKIN CAD. NO:24/13 - PENDİK İSTANBUL",
+      "email": "aslisenol@gmail.com",
+      "password": "test123",
+      "phoneNumber": "+905465236985",
+      "job": "Beyin Cerrahı",
+      "bio": "2 kedim var. Kedilere Bayılırım.",
+      "pictureUrl": "https://randomuser.me/api/portraits/women/11.jpg",
+      "userRoleId": 0
+    },
+    {
+      "id": 3,
+      "name": "Eylül  Sokullu",
+      "adress": "HÜRRİYET CADDESI NO:22 YENICE, KARABÜK",
+      "email": "eylulsokullu@gmail.com",
+      "password": "test123",
+      "phoneNumber": "+905056941784",
+      "job": "İngilizce Öğretmeni",
+      "bio": "Yalnız yaşıyorum.",
+      "pictureUrl": "https://randomuser.me/api/portraits/women/63.jpg",
+      "userRoleId": 0
+    },
+    {
+      "id": 4,
+      "name": "Taylan  Ekin",
+      "adress": "6041 SK. NO:43/B KARŞIYAKA İZMİR",
+      "email": "taylanekin@gmail.com",
+      "password": "test123",
+      "phoneNumber": "+905531985472",
+      "job": "Muhasebe Danışmanı",
+      "bio": "Büyük bir evde yaşıyorum.",
+      "pictureUrl": "https://randomuser.me/api/portraits/men/36.jpg",
+      "userRoleId": 0
+    },
+    {
+      "id": 5,
+      "name": "Kemal Doğru",
+      "adress": "BALMUMCU MAH.SAKIR KESEBIR SOK NO:69 BALMUMCU/BEŞİKTAŞ İSTANBUL",
+      "email": "kemaldoğru@gmail.com",
+      "password": "test123",
+      "phoneNumber": "+905374125589",
+      "job": "Emlakçı",
+      "bio": "Yalnız yaşıyorum. Hayvan dost arıyorum.",
+      "pictureUrl": "https://randomuser.me/api/portraits/men/66.jpg",
+      "userRoleId": 1
+    }
+  ],
+  "pets": [
+    {
+      "id":1,
+      "name":"Pati",
+      "age":2,
+      "type":0,
+      "breed":"Golden Retriever",
+      "bio":"Topla oynamayı çok sever. Yıkanmaktan hoşlanmaz.",
+      "gender":0,
+      "pictureUrl":"https://images.dog.ceo/breeds/labrador/Luke.jpg",
+      "ownerId":1
+    },
+    {
+      "id":2,
+      "name":"Karabaş",
+      "age":4,
+      "type":0,
+      "breed":"Mastiff-Bull",
+      "bio":"Başının okşanmasına bayılır. Yemek yerken seyredilmekten hoşlanmaz.",
+      "gender":1,
+      "pictureUrl":"https://images.dog.ceo/breeds/mastiff-bull/n02108422_3101.jpg",
+      "ownerId":2
+    },
+    {
+      "id":3,
+      "name":"Gölge",
+      "age":1,
+      "type":1,
+      "breed":"Scottish Fold",
+      "bio":"Karton kutuda uyumayı sever. Yıkanmaktan hoşlanmaz.",
+      "gender":1,
+      "pictureUrl":"https://pbs.twimg.com/profile_images/684095287720325121/mdHN09OY_400x400.jpg",
+      "ownerId":3
+    },
+    {
+      "id":4,
+      "name":"Tekir",
+      "age":2,
+      "type":1,
+      "breed":"Tekir",
+      "bio":"Tüylerinin taranmasını sever. Kuyruğuna dokunulmasından hoşlanmaz.",
+      "gender":0,
+      "pictureUrl":"https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg",
+      "ownerId":4
+    }
+  ],
+  "adverts": [
+    {
+      "id":1,
+      "title":"Acil yuva aranıyor",
+      "explanation":"Sokakta bulduk. Tedavisini yaptırdık. Kendisine bir aile arıyoruz.",
+      "userId":1,
+      "petId":4,
+      "pictureUrl":"https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg"
+    },
+    {
+      "id":2,
+      "title":"Barınaktan aldık. Yeni bir aile arıyoruz.",
+      "explanation":"Barınaktan aldık ancak bakamadığımızı farkettik. Kendisine yeni bir yuva arıyoruz.",
+      "userId":2,
+      "petId":3,
+      "pictureUrl":"https://pbs.twimg.com/profile_images/684095287720325121/mdHN09OY_400x400.jpg"
+    },
+    {
+      "id":3,
+      "title":"1 yaşında golden. Aile aranıyor.",
+      "explanation":"Köpeğimiz yavruladı. Bu yavruya artık bakamıyoruz.",
+      "userId":3,
+      "petId":1,
+      "pictureUrl":"https://images.dog.ceo/breeds/labrador/Luke.jpg"
+    },
+    {
+      "id":4,
+      "title":"Cana yakın mastiff-bull.",
+      "explanation":"Vefat eden babamın köpeğini sahiplendiriyoruz. İlgilenenler ulaşsın.",
+      "userId":4,
+      "petId":2,
+      "pictureUrl":"https://images.dog.ceo/breeds/mastiff-bull/n02108422_3101.jpg"
+    }
+  ]
+}

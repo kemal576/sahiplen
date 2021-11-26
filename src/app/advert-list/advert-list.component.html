@@ -1,26 +1,17 @@
-<div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small>3 days ago</small>
+ <div class="list-group" style="width: fit-content;">
+    <a routerLink="advert/{{advert.id}}" *ngFor="let advert of adverts" class="list-group-item list-group-item-action list-group-item-secondary" aria-current="true">
+      <div class="row">
+        <div class="col-md-2">
+          <img [src]="advert.pictureUrl" class="img-thumbnail" alt="İlan Resmi" style="width: 100px; height: 100px;">
+        </div>
+        <div class="col-md-8">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{advert.title}}</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">{{advert.explanation}}</p>
+          <small>User ID: {{advert.userId}}</small>
+        </div>
       </div>
-      <p class="mb-1">Some placeholder content in a paragraph.</p>
-      <small>And some small print.</small>
     </a>
-    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">List group item heading</h5>
-          <small>3 days ago</small>
-        </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small>And some small print.</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">List group item heading</h5>
-          <small>3 days ago</small>
-        </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small>And some small print.</small>
-      </a>
   </div>
