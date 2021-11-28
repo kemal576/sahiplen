@@ -1,8 +1,15 @@
 <div class="card mb-3">
-    <img src="#" class="card-img-top" alt="...">
+  <img [src]="data.pictureUrl" class="card-img-top" style="width: 200px; height: 200px;" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">{{data.title}}</h5>
+      <p class="card-text">{{data.explanation}}</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <hr>
+      <p class="fw-bold">Dostunu tanı:</p>
+      <p class="card-text"><b>İsim: </b>{{data.name}}</p>
+      <p class="card-text"><b>Cins: </b>{{data.breed}}</p>
+      <p class="card-text"><b>Yaş: </b>{{data.age}}</p>
+      <p class="card-text"><b>Tanıtım: </b>{{data.bio}}</p>
+      <p class="card-text"><b>Cinsiyet: </b>{{data.gender}}</p>
     </div>
   </div>

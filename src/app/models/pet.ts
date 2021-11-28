@@ -7,4 +7,6 @@ export class Pet{
     bio!: string;
     gender!: number;
     pictureUrl!: string;
+
+
 }

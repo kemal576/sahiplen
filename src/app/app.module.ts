@@ -6,12 +6,14 @@ import { AdvertListComponent } from './advert-list/advert-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdvertDetailsComponent } from './advert-details/advert-details.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdvertListComponent,
-    AdvertDetailsComponent
+    AdvertDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
