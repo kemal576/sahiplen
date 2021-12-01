@@ -21,5 +21,11 @@ export class AdvertServiceService {
     return this.http.get<Advert>(this.path+id)
   }
 
+  addAdvert(advert:Advert){
+    return this.http.post<any>(this.path,advert)
+  }
+
+  
+
   
 }

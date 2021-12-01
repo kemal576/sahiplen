@@ -1,0 +1,63 @@
+<div>
+  <div class="mt-1 row gx-5 justify-content-center" style="padding-top: 3%;">
+    <div class="col-lg-8 col-xl-6">
+      <div class="text-center">
+        <h2 class="fw-bolder">Gönderilen Sahiplenme Talepleri</h2>
+        <p class="lead fw-normal text-muted mb-5">Gönderilen sahiplenme talepleri ve detayları aşağıdadır.</p>
+      </div>
+    </div>
+  </div>
+  <section class="py-5" *ngFor="let sent of sentlist">
+    <div class="container px-5" style="width: 50%; height: 50%;">
+      <div class="card border-0 shadow rounded-3 overflow-hidden">
+        <div class="card-body p-0 deneme">
+          <div class="row ">
+            <div class="col-lg-2 col-xl-5 ">
+              <div class="p-4 p-md-5">
+                <div class=""><span class="h2 text-danger">{{sent.petName}}</span> için yapılan talep durumu:</div>
+                <hr>
+                <p class=" text-decoration">Talep Gönderilen Kişinin</p>
+                <p class="fw-bolder">Adı: <span class="text-danger">{{sent.receiverName}}</span></p>
+                <p class="fw-bolder">Talep Durumu: <span class="text-danger">{{sent.decisionMessage}}</span></p>
+                <p class="fw-bolder">İletişim bilgilerine ulaşmak için aşağıdaki butona tıklayınız.</p>
+                <button *ngIf="sent.isAccepted;"  type="button" (click)="showReceiverInfo(sent.id)" class="btn btn-md btn-outline-success"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Bilgileri Görüntüle
+                </button>
+
+                <a class="btn btn-md btn-outline-danger" (click)="delete(sent.id)">Talebi sil</a>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <img [src]="sent.petPictureUrl" alt="kişi fotoğrafı" style="width: 150px; height: 150px;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">İlan Sahibinin İletişim Bilgileri</h5>
+      </div>
+      <div class="modal-body" *ngIf="receiverInfo;">
+          <img [src]="receiverInfo.pictureUrl" alt="İlan Sahibi Fotoğrafı">
+        <p class="fw-bolder">Adı: <span class="text-danger">{{receiverInfo.name}}</span></p>
+        <p class="fw-bolder">Adresi: <span class="text-danger">{{receiverInfo.adress}}</span></p>
+        <p class="fw-bolder">Telefon Numarası: <span class="text-danger">{{receiverInfo.phoneNumber}}</span></p>
+        <p class="fw-bolder">Mail Adresi: <span class="text-danger">{{receiverInfo.email}}</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->

@@ -5,8 +5,18 @@ export class Pet{
     age!: number;
     ownerId!: number;
     bio!: string;
-    gender!: number;
+    gender!: string;
     pictureUrl!: string;
 
+
+    /*constructor(name: string, breed: string, age: number, ownerId: number, bio: string, gender: string, pictureUrl: string) {
+       this.name = name;
+       this.breed = breed;
+       this.age = age;
+       this.ownerId = ownerId;
+       this.bio = bio;
+       this.gender = gender;
+       this.pictureUrl = pictureUrl;
+    }*/
 
 }

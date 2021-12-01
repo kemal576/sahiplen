@@ -1,0 +1,36 @@
+<div class="mt-1 row gx-5 justify-content-center" style="padding-top: 3%;">
+  <div class="col-lg-8 col-xl-6">
+    <div class="text-center">
+      <h2 class="fw-bolder">Gelen Sahiplenme Talepleri</h2>
+      <p class="lead fw-normal text-muted mb-5">İlandaki dostunuz için gelen sahiplenme talepleri ve detayları
+        aşağıdadır.</p>
+    </div>
+  </div>
+</div>
+<section class="py-3" *ngFor="let request of incomings">
+  <div class="container px-5" style="width: 60%; height: 50%;">
+    <div class="card border-0 shadow rounded-3 overflow-hidden">
+      <div class="card-body p-0 deneme">
+        <div class="row ">
+          <div class="col-lg-2 col-xl-5">
+            <div class="p-4 p-md-5">
+              <div class=""><span class="h2 text-danger">{{request.petName}}</span> için</div>
+              <hr>
+              <p class=" text-decoration">Talep Yollayan Kişinin</p>
+              <p class="fw-bolder">Adı: <span class="text-danger">{{request.sender.name}}</span></p>
+              <p class="fw-bolder">Mesleği: <span class="text-danger">{{request.sender.job}}</span></p>
+              <p class="fw-bolder">Hakkında: <span class="text-danger">{{request.sender.bio}}</span></p>
+              <p class="fw-bolder">Adresi: <span class="text-danger">{{request.sender.adress}}</span></p>
+              <a class="btn btn-outline-success mx-1" (click)="decide(request.id,true)">Onayla</a>
+              <a class="btn btn-outline-danger mx-1" (click)="decide(request.id,false)">Reddet</a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img [src]="request.sender.pictureUrl" alt="kişi fotoğrafı">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

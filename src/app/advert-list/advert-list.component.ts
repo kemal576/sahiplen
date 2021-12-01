@@ -12,7 +12,6 @@ export class AdvertListComponent implements OnInit {
 
   constructor(private advertService: AdvertServiceService) { }
 
-  path = "http://localhost:3000/adverts";
   adverts : Advert[] = [];
 
   ngOnInit(): void {

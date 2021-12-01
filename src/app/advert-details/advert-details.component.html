@@ -1,3 +1,29 @@
+  <header class="masthead2">
+    <section class="py-5 bg-advert" id="scroll-target">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" [src]="data.pictureUrl"
+              style="width: 200px; height: 200px;" alt="..." /></div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder text-primary">{{data.title}}</h2>
+            <h6 class="fw-bolder text-white">{{data.explanation}}</h6>
+            <p class="lead fw-normal text-white mb-0"><b>İsim: </b> <span class="text-primary">{{data.name}}</span></p>
+            <p class="lead fw-normal text-white mb-0"><b>Cins: </b> <span class="text-primary">{{data.breed}}</span></p>
+            <p class="lead fw-normal text-white mb-0"><b>Yaş: </b> <span class="text-primary">{{data.age}}</span></p>
+            <p class="lead fw-normal text-white mb-0"><b>Hakkında: </b> <span class="text-primary">{{data.bio}}</span></p>
+            <p class="lead fw-normal text-white mb-0"><b>Cinsiyet: </b> <span class="text-primary">{{data.gender}}</span></p>
+
+  
+            <a class="btn btn-outline-light mt-5" (click)="sendRequest(advertId)">Sahiplenmek için bir talepte bulun!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+<!--
+  
 <div class="card mb-3">
   <img [src]="data.pictureUrl" class="card-img-top" style="width: 200px; height: 200px;" alt="...">
     <div class="card-body">
@@ -13,3 +39,4 @@
       <p class="card-text"><b>Cinsiyet: </b>{{data.gender}}</p>
     </div>
   </div>
+-->

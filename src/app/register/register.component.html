@@ -1,0 +1,51 @@
+<header class="masthead4">
+    <section class="py-5 bg-transparent">
+        <div class="container px-5">
+            <div class="bg-transparent rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder text-light">Kayıt Ol</h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form [formGroup]="registerForm" (ngSubmit)="register()" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <div class="form-floating mb-3 ">
+                                <input formControlName="email" class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email</label>
+                            </div>   
+                            <div class="form-floating mb-3">
+                                <input formControlName="name" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Adınız</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="phoneNumber" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Numaranız</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="adress" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Adresiniz</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="password" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Parola</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="job" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Meslek</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="bio" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Kendini Tanıt</label>
+                            </div> 
+                            <div class="form-floating mb-3">
+                                <input formControlName="photoUrl" class="form-control" id="password" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Fotoğrafınızın URL'i</label>
+                            </div> 
+                            <div class="d-grid"><button class="btn btn-outline-light btn-lg" id="submitButton" type="submit">Kaydol</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</header>
