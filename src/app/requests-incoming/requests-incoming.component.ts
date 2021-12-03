@@ -4,6 +4,7 @@ import { User } from '../models/user';
 import { PetService } from '../services/pet.service';
 import { RequestService } from '../services/request.service';
 import { UserService } from '../services/user.service';
+declare let alertify:any;
 
 @Component({
   selector: 'requests-incoming',
@@ -47,7 +48,7 @@ export class RequestsIncomingComponent implements OnInit {
         r.decisionStatus = true;
         r.isAccepted = isAccepted;
         this.requestService.updateRequest(r).subscribe(rr => {
-          alert("Seçiminiz başarıyla kaydedildi.")
+          alertify.success("Seçiminiz kaydedildi.")
         })
       }
 

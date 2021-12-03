@@ -4,6 +4,7 @@ import { User } from '../models/user';
 import { PetService } from '../services/pet.service';
 import { RequestService } from '../services/request.service';
 import { UserService } from '../services/user.service';
+declare let alertify:any;
 
 @Component({
   selector: 'requests-sent',
@@ -48,7 +49,7 @@ export class RequestsSentComponent implements OnInit {
 
   delete(id: number) {
     this.requestService.deleteRequest(id).subscribe(r => {
-      alert("Talep başarıyla kaldırıldı.")
+      alertify.success("Talep başarıyla kaldırıldı.")
     })
   }
 

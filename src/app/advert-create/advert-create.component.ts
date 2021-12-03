@@ -7,6 +7,8 @@ import { User } from '../models/user';
 import { AdvertServiceService } from '../services/advert-service.service';
 import { PetService } from '../services/pet.service';
 
+declare let alertify:any;
+
 @Component({
   selector: 'app-advert-create',
   templateUrl: './advert-create.component.html',
@@ -16,9 +18,9 @@ export class AdvertCreateComponent implements OnInit {
 
   public advertForm !: FormGroup
   constructor(private formBuilder: FormBuilder,
-              private petService: PetService,
-              private advertService: AdvertServiceService,
-              private router: Router) { }
+    private petService: PetService,
+    private advertService: AdvertServiceService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.advertForm = this.formBuilder.group({
@@ -34,27 +36,22 @@ export class AdvertCreateComponent implements OnInit {
   }
 
   createAdvert() {
-    const pet = new Pet();
-    pet.name = this.advertForm.value.name;
-    pet.age = this.advertForm.value.age;
-    pet.breed = this.advertForm.value.breed;
-    pet.gender = this.advertForm.value.gender;
-    pet.bio = this.advertForm.value.bio;
-    pet.pictureUrl = this.advertForm.value.pictureUrl;
+    let json = localStorage.getItem('currentUser')
+    if (json) {
+      let currentUser: User = JSON.parse(json);
+      const pet = new Pet()
+      pet.setProperties(this.advertForm.value.name, this.advertForm.value.breed,
+        this.advertForm.value.age, currentUser.id, this.advertForm.value.bio,
+        this.advertForm.value.gender, this.advertForm.value.pictureUrl);
+        const advert = new Advert();
+        advert.title = this.advertForm.value.title;
+        advert.explanation = this.advertForm.value.explanation;
+      this.petService.addPet(pet).subscribe(p => {
+        advert.setProperties(currentUser.id, p.id, p.pictureUrl)
+        this.advertService.addAdvert(advert).subscribe(a => { alertify.success("İlan başarıyla kaydedildi!") })
+      })
+    }
 
-    this.petService.addPet(pet).subscribe(p => {
-      const advert = new Advert();
-      advert.title = this.advertForm.value.title;
-      advert.explanation = this.advertForm.value.explanation;
-      advert.petId = p.id;
-      advert.pictureUrl = p.pictureUrl;
-      let json = localStorage.getItem('currentUser')
-      if (json) {
-        let currentUser: User = JSON.parse(json);
-        advert.userId = currentUser.id;
-      }
-      this.advertService.addAdvert(advert).subscribe(a => { alert("İlan başarıyla kaydedildi!") })
-    })
     this.advertForm.reset();
     this.router.navigate(['advertList']);
   }

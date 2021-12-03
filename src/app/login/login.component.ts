@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
 import { NavbarComponent } from '../navbar/navbar.component';
+declare let alertify:any;
 
 @Component({
   selector: 'app-login',
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['']);
       }
       else{
-        alert("Kullanıcı bulunamadı.")
+        alertify.error("Kullanıcı bulunamadı.")
       }
 
       

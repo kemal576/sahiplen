@@ -78,7 +78,6 @@
       "id": 1,
       "name": "Pati",
       "age": 2,
-      "type": 0,
       "breed": "Golden Retriever",
       "bio": "Topla oynamayı çok sever. Yıkanmaktan hoşlanmaz.",
       "gender": "Erkek",
@@ -89,7 +88,6 @@
       "id": 2,
       "name": "Karabaş",
       "age": 4,
-      "type": 0,
       "breed": "Mastiff-Bull",
       "bio": "Başının okşanmasına bayılır. Yemek yerken seyredilmekten hoşlanmaz.",
       "gender": "Dişi",
@@ -100,7 +98,6 @@
       "id": 3,
       "name": "Gölge",
       "age": 1,
-      "type": 1,
       "breed": "Scottish Fold",
       "bio": "Karton kutuda uyumayı sever. Yıkanmaktan hoşlanmaz.",
       "gender": "Dişi",
@@ -109,23 +106,13 @@
     },
     {
       "id": 4,
-      "name": "Tekir",
+      "name": "Pamuk",
       "age": 2,
-      "type": 1,
       "breed": "Tekir",
       "bio": "Tüylerinin taranmasını sever. Kuyruğuna dokunulmasından hoşlanmaz.",
       "gender": "Erkek",
       "pictureUrl": "https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg",
       "ownerId": 4
-    },
-    {
-      "name": "Karabaş",
-      "age": "3",
-      "breed": "Kangal",
-      "gender": "Erkek",
-      "bio": "Harika bir köpek.",
-      "pictureUrl": "https://www.cumhuriyet.com.tr/Archive/2010/9/24/181044_cover.jpeg",
-      "id": 5
     }
   ],
   "adverts": [
@@ -135,7 +122,8 @@
       "explanation": "Sokakta bulduk. Tedavisini yaptırdık. Kendisine bir aile arıyoruz.",
       "userId": 1,
       "petId": 4,
-      "pictureUrl": "https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg"
+      "pictureUrl": "https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg",
+      "createDate": "2021-12-03T20:25:25.177Z"
     },
     {
       "id": 2,
@@ -143,7 +131,8 @@
       "explanation": "Barınaktan aldık ancak bakamadığımızı farkettik. Kendisine yeni bir yuva arıyoruz.",
       "userId": 2,
       "petId": 3,
-      "pictureUrl": "https://pbs.twimg.com/profile_images/684095287720325121/mdHN09OY_400x400.jpg"
+      "pictureUrl": "https://pbs.twimg.com/profile_images/684095287720325121/mdHN09OY_400x400.jpg",
+      "createDate": "2021-12-02T20:25:25.177Z"
     },
     {
       "id": 3,
@@ -151,7 +140,8 @@
       "explanation": "Köpeğimiz yavruladı. Bu yavruya artık bakamıyoruz.",
       "userId": 3,
       "petId": 1,
-      "pictureUrl": "https://images.dog.ceo/breeds/labrador/Luke.jpg"
+      "pictureUrl": "https://images.dog.ceo/breeds/labrador/Luke.jpg",
+      "createDate": "2021-12-01T20:25:25.177Z"
     },
     {
       "id": 4,
@@ -159,33 +149,18 @@
       "explanation": "Vefat eden babamın köpeğini sahiplendiriyoruz. İlgilenenler ulaşsın.",
       "userId": 4,
       "petId": 2,
-      "pictureUrl": "https://images.dog.ceo/breeds/mastiff-bull/n02108422_3101.jpg"
-    },
-    {
-      "title": null,
-      "explanation": null,
-      "petId": 5,
-      "pictureUrl": "https://www.cumhuriyet.com.tr/Archive/2010/9/24/181044_cover.jpeg",
-      "userId": 1,
-      "id": 5
+      "pictureUrl": "https://images.dog.ceo/breeds/mastiff-bull/n02108422_3101.jpg",
+      "createDate": "2021-11-29T20:25:25.177Z"
     }
   ],
   "requests": [
     {
-      "id": 2,
-      "senderId": 2,
-      "receiverId": 1,
-      "petId": 4,
-      "decisionStatus": false,
-      "isAccepted": false
-    },
-    {
-      "id": 2,
       "senderId": 1,
-      "receiverId": 3,
+      "receiverId": 2,
       "petId": 3,
       "decisionStatus": false,
-      "isAccepted": false
+      "isAccepted": false,
+      "id": 1
     }
   ]
 }

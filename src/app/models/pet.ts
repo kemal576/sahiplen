@@ -9,7 +9,7 @@ export class Pet{
     pictureUrl!: string;
 
 
-    /*constructor(name: string, breed: string, age: number, ownerId: number, bio: string, gender: string, pictureUrl: string) {
+    setProperties(name: string, breed: string, age: number, ownerId: number, bio: string, gender: string, pictureUrl: string) {
        this.name = name;
        this.breed = breed;
        this.age = age;
@@ -17,6 +17,6 @@ export class Pet{
        this.bio = bio;
        this.gender = gender;
        this.pictureUrl = pictureUrl;
-    }*/
+    }
 
 }

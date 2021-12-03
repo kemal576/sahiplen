@@ -5,6 +5,7 @@ import { User } from '../models/user';
 import { AdvertServiceService } from '../services/advert-service.service';
 import { PetService } from '../services/pet.service';
 import { RequestService } from '../services/request.service';
+declare let alertify:any;
 
 @Component({
   selector: 'app-advert-details',
@@ -38,32 +39,21 @@ export class AdvertDetailsComponent implements OnInit {
     if (json) {
       let currentUser: User = JSON.parse(json);
       this.advertService.getAdvertDetails(advertId).subscribe(a => {
-        //if (this.checkRequest(a.petId, currentUser.id)) {
-          this.requestService.addRequest(new Request(currentUser.id, a.userId, a.petId, false, false))
-            .subscribe(r => { alert("Talep başarıyla gönderildi.") })
-        //}
-        //else
-          //alert("Zaten bu ilana bir talep yolladınız!")
+        this.requestService.checkRequest(a.petId, currentUser.id).subscribe(p => {
+          if (a.userId != currentUser.id) {
+            if (p.length == 0)
+              this.requestService.addRequest(new Request(currentUser.id, a.userId, a.petId, false, false)).subscribe(r => { alertify.success("Talep başarıyla gönderildi.") })
+            else
+              alertify.warning("Zaten bu ilana bir talep yolladınız!")
+          }
+          else
+          alertify.warning("Kendi ilanınıza talep gönderemezsiniz!");
+        })
+
       })
     }
   }
 
-  /*checkRequest(petId: number, senderId: number): boolean {
-    var bool: boolean = false;
-    this.requestService.checkRequest(petId, senderId).subscribe(p => {
-      if (p === undefined) {
-        console.log("UNDEFINED")
-        bool = false;
-      }
-
-      else{
-        console.log("DEFINED")
-        bool = true;
-      }
-    })
-    console.log("BOOL: "+bool)
-    return bool;
-  }*/
 
 
 

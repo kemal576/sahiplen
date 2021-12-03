@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+declare let alertify:any;
 
 @Component({
   selector: 'app-register',
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
   register(){
     this.http.post<any>("http://localhost:3000/users",this.registerForm.value)
     .subscribe(res => {
-      alert("Başarıyla kaydoldunuz");
+      alertify.success("Başarıyla kaydoldunuz");
       this.registerForm.reset();
       this.router.navigate(['login']);
     })

@@ -1,12 +1,17 @@
 import { Advert } from "./advert";
 import { Pet } from "./pet";
 
-export class AdvertDetails{
-    advert:Advert;
-    pet:Pet;
+export class AdvertDetails {
+    advert: Advert;
+    username: string;
+    breed: string;
+    diffDay: number;
 
-    constructor(){
+    constructor(username: string, breed: string, diffDay: number, id:number, title: string, explanation: string, pictureUrl: string) {
         this.advert = new Advert()
-        this.pet = new Pet()
+        this.advert.setProperties2(id,title,explanation,pictureUrl)
+        this.username = username;
+        this.breed = breed;
+        this.diffDay = diffDay;
     }
 }
