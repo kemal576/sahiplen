@@ -20,12 +20,12 @@
                 <p class="fw-bolder">Adı: <span class="text-danger">{{sent.receiverName}}</span></p>
                 <p class="fw-bolder">Talep Durumu: <span class="text-danger">{{sent.decisionMessage}}</span></p>
                 <p class="fw-bolder">İletişim bilgilerine ulaşmak için aşağıdaki butona tıklayınız.</p>
-                <button *ngIf="sent.isAccepted;"  type="button" (click)="showReceiverInfo(sent.id)" class="btn btn-md btn-outline-success"
+                <button *ngIf="sent.isAccepted;"  type="button" (click)="showReceiverInfo(sent.id)" class="btn btn-sm btn-outline-success my-2"
                   data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Bilgileri Görüntüle
                 </button>
 
-                <a class="btn btn-md btn-outline-danger" (click)="delete(sent.id)">Talebi sil</a>
+                <a class="btn btn-sm btn-outline-danger" (click)="delete(sent.id)">Talebi sil</a>
               </div>
             </div>
             <div class="col-md-5">

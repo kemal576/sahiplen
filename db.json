@@ -52,7 +52,7 @@
       "id": 5,
       "name": "Kemal Doğru",
       "adress": "BALMUMCU MAH.SAKIR KESEBIR SOK NO:69 BALMUMCU/BEŞİKTAŞ İSTANBUL",
-      "email": "kemaldoğru@gmail.com",
+      "email": "kemaldogru@gmail.com",
       "password": "test123",
       "phoneNumber": "+905374125589",
       "job": "Emlakçı",
@@ -112,7 +112,7 @@
       "bio": "Tüylerinin taranmasını sever. Kuyruğuna dokunulmasından hoşlanmaz.",
       "gender": "Erkek",
       "pictureUrl": "https://pbs.twimg.com/profile_images/728349676680843264/ptRQ5xUO_400x400.jpg",
-      "ownerId": 4
+      "ownerId": 1
     }
   ],
   "adverts": [
@@ -158,9 +158,25 @@
       "senderId": 1,
       "receiverId": 2,
       "petId": 3,
+      "decisionStatus": true,
+      "isAccepted": true,
+      "id": 1
+    },
+    {
+      "senderId": 6,
+      "receiverId": 1,
+      "petId": 4,
+      "decisionStatus": true,
+      "isAccepted": false,
+      "id": 2
+    },
+    {
+      "senderId": 5,
+      "receiverId": 1,
+      "petId": 4,
       "decisionStatus": false,
       "isAccepted": false,
-      "id": 1
+      "id": 3
     }
   ]
 }
