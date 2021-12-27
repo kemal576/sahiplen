@@ -18,4 +18,8 @@ export class PetService {
   addPet(pet: Pet){
     return this.http.post<Pet>(this.path,pet);
   }
+
+  deletePet(petId: number){
+    return this.http.delete<any>(this.path+petId);
+  }
 }

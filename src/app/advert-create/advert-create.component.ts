@@ -7,7 +7,7 @@ import { User } from '../models/user';
 import { AdvertServiceService } from '../services/advert-service.service';
 import { PetService } from '../services/pet.service';
 
-declare let alertify:any;
+declare let alertify: any;
 
 @Component({
   selector: 'app-advert-create',
@@ -43,16 +43,14 @@ export class AdvertCreateComponent implements OnInit {
       pet.setProperties(this.advertForm.value.name, this.advertForm.value.breed,
         this.advertForm.value.age, currentUser.id, this.advertForm.value.bio,
         this.advertForm.value.gender, this.advertForm.value.pictureUrl);
-        const advert = new Advert();
-        advert.title = this.advertForm.value.title;
-        advert.explanation = this.advertForm.value.explanation;
+      const advert = new Advert();
+      advert.title = this.advertForm.value.title;
+      advert.explanation = this.advertForm.value.explanation;
       this.petService.addPet(pet).subscribe(p => {
         advert.setProperties(currentUser.id, p.id, p.pictureUrl)
         this.advertService.addAdvert(advert).subscribe(a => { alertify.success("İlan başarıyla kaydedildi!") })
+        this.advertForm.reset();
       })
     }
-
-    this.advertForm.reset();
-    this.router.navigate(['advertList']);
   }
 }

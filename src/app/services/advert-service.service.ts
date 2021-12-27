@@ -25,6 +25,10 @@ export class AdvertServiceService {
     return this.http.post<any>(this.path,advert)
   }
 
+  deleteAdvert(advertId: number){
+    return this.http.delete<any>(this.path + advertId)
+  }
+
   
 
   
