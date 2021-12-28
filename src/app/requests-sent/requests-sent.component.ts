@@ -29,10 +29,11 @@ export class RequestsSentComponent implements OnInit {
     if (json) {
       let currentUser: User = JSON.parse(json);
       this.requestService.getRequestsBySenderId(currentUser.id).subscribe(r => {
+        console.log(r)
         r.forEach(element => {
           this.userService.getUser(element.receiverId).subscribe(u => {
             this.petService.getPetDetails(element.petId).subscribe(p => {
-              let sent = new SentReq(element.id, u.name, p.name, p.pictureUrl, element.decisionStatus, element.isAccepted);
+              let sent = new SentReq(element.receiverId, u.name, p.name, p.pictureUrl, element.decisionStatus, element.isAccepted);
               this.sentlist.push(sent);
             })
           })
@@ -44,6 +45,7 @@ export class RequestsSentComponent implements OnInit {
   showReceiverInfo(id: number) {
     this.userService.getUser(id).subscribe(u => {
       this.receiverInfo = new User(u.id,u.name,u.adress,u.email,u.phoneNumber,u.pictureUrl);
+      console.log(id)
     })
   }
 
